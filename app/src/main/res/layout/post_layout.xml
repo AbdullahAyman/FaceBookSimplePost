@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+         android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/user_profile"
+            android:layout_height="@dimen/user_profile"
+            android:src="@drawable/image"
+            android:id="@+id/user_img"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/title_margin"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="User Name"
+                android:textColor="@color/username"
+                android:id="@+id/user_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="postTime"
+                android:id="@+id/post_time"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/body"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:layout_marginTop="@dimen/title_margin"
+            android:textColor="@color/username"
+            android:text="plaplaplaplaplapplapalpalaplplapplaplaplaplaplapplapalpalaplplap plalaplaplap"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/post_img"
+            android:layout_marginTop="@dimen/title_margin"
+            android:layout_gravity="center|top"
+            android:id="@+id/post_photo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/title_margin">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/status"
+            android:textColor="@color/username"
+            android:text="plaplaplaplalpalpal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:padding="0dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_weight="1"
+            android:layout_margin="0dp"
+            android:text="Likes"
+            android:textColor="@color/button_text"
+            android:background="@color/button_bg"
+            android:textAllCaps="false"
+            android:id="@+id/likes"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_weight="1"
+            android:text="Comments"
+            android:textColor="@color/button_text"
+            android:background="@color/button_bg"
+            android:textAllCaps="false"
+            android:id="@+id/comments"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_weight="1"
+            android:text="Share"
+            android:textColor="@color/button_text"
+            android:background="@color/button_bg"
+            android:textAllCaps="false"
+            android:id="@+id/share"/>
+    </LinearLayout>
+
+</LinearLayout>

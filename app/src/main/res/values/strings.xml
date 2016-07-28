@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FaceBookSimplePost</string>
+    <string name="url">https://dl.dropboxusercontent.com/s/7rvknz9e6tfprun/facebookFeed.json</string>
+</resources>
