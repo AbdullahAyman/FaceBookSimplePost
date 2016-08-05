@@ -13,6 +13,7 @@ import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.lang.reflect.Type;
@@ -48,12 +49,13 @@ public class ListViewFragment extends Fragment implements onExecuteEnd {
     }
 
     @Override
-    public void onSuccess(JSONObject obj) {
+    public void onSuccess(JSONArray obj) {
         Gson gson = new Gson();
-        Type type = new TypeToken<FacebookFeedData>(){}.getType();
-        FacebookFeedData data =gson.fromJson(obj.toString(), type);
+        Type type = new TypeToken<ArrayList<FacebookFeedData>>(){}.getType();
         ArrayList<FacebookFeedData> facebookFeedDatas = new ArrayList<>();
-        facebookFeedDatas.add(data);
+        //FacebookFeedData data
+        facebookFeedDatas=gson.fromJson(obj.toString(), type);
+        //facebookFeedDatas.add(data);
         PostAdapter postAdapter = new PostAdapter(getActivity(),facebookFeedDatas);
         listView.setAdapter(postAdapter);
         //Toast.makeText(getActivity(), "" + data, Toast.LENGTH_SHORT).show();

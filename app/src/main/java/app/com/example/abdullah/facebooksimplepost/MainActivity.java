@@ -19,7 +19,7 @@ import app.com.example.abdullah.facebooksimplepost.Interface.onExecuteEnd;
 import app.com.example.abdullah.facebooksimplepost.Model.FacebookFeedData;
 import app.com.example.abdullah.facebooksimplepost.Parser.FacebookFeedParser;
 
-public class MainActivity extends AppCompatActivity implements onExecuteEnd{
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,19 +36,6 @@ public class MainActivity extends AppCompatActivity implements onExecuteEnd{
         Fragment fragment = new ListViewFragment();
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.main_fragment, fragment).commit();
-
-    }
-
-    @Override
-    public void onSuccess(JSONObject obj) {
-        Gson gson = new Gson();
-        Type type = new TypeToken<FacebookFeedData>(){}.getType();
-        FacebookFeedData data =gson.fromJson(obj.toString(), type);
-        //Toast.makeText(MainActivity.this, ""+data, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onError(VolleyError obj) {
 
     }
 }
